@@ -1,125 +1,30 @@
-### WEEK 2 (SPRING CORE MAVEN)
-**Library Management System**
+Exercise 1: Employee Management System - Overview and Setup
 
-**Steps:**
+Initialize a Spring Boot project named EmployeeManagementSystem with dependencies: Spring Data JPA, H2 Database, Spring Web, and Lombok. Configure application.properties for H2 database connection using the provided settings.
+Exercise 2: Employee Management System - Creating Entities
 
-1. **Create Maven Project:**
-   - Created a Maven project named `LibraryManagement`.
-   - Added Spring Core dependencies in the `pom.xml` file.
+Define JPA entities for Employee and Department with appropriate fields and relationships. Use annotations like @Entity and @Table to map entities to database tables, and establish a one-to-many relationship between Department and Employee.
+Exercise 3: Employee Management System - Creating Repositories
 
-2. **Configure Spring Beans:**
-   - Created an XML configuration file named `applicationContext.xml` in the `src/main/resources` directory.
-   - Defined beans for `BookService` and `BookRepository` in the XML file.
+Create EmployeeRepository and DepartmentRepository interfaces extending JpaRepository for CRUD operations. Define derived query methods to leverage Spring Data repositories for efficient data management.
+Exercise 4: Employee Management System - Implementing CRUD Operations
 
-3. **Create Packages and Classes:**
-   - Created a package `com.library.service` and added a class `BookService`.
-   - Created a package `com.library.repository` and added a class `BookRepository`.
+Implement basic CRUD operations using JpaRepository methods. Develop RESTful endpoints in EmployeeController and DepartmentController to manage employees and departments.
+Exercise 5: Employee Management System - Defining Query Methods
 
-4. **Run the Application:**
-   - Detailed instructions on running the application are provided.
+Enhance repositories with custom queries using method names and the @Query annotation. Define and execute named queries with @NamedQuery and @NamedQueries for specialized data retrieval.
+Exercise 6: Employee Management System - Implementing Pagination and Sorting
 
----
+Add pagination to employee search functionality using Page and Pageable. Incorporate sorting capabilities and combine pagination with sorting in search endpoints to improve data retrieval.
+Exercise 7: Employee Management System - Enabling Entity Auditing
 
-### WEEK 2 (PL/SQL)
-**Bank Database Management Project**
+Enable entity auditing to track creation and modification of employees and departments. Use annotations like @CreatedBy, @LastModifiedBy, @CreatedDate, and @LastModifiedDate for auditing purposes.
+Exercise 8: Employee Management System - Creating Projections
 
-This project involves creating and managing a bank database using PL/SQL. It covers various aspects such as control structures, error handling, stored procedures, functions, triggers, cursors, and packages.
+Create interface-based and class-based projections to fetch specific data subsets from entities. Use @Value and constructor expressions to customize the data returned by projections.
+Exercise 9: Employee Management System - Customizing Data Source Configuration
 
-**Exercises:**
+Customize data source configuration and manage multiple data sources. Leverage Spring Boot auto-configuration and externalize settings in application.properties for flexible data source management.
+Exercise 10: Employee Management System - Hibernate-Specific Features
 
-**Exercise 1: Control Structures**
-
-1. **Discount for Senior Customers:**
-   - Loop through customers and apply a 1% discount to loan interest rates for those above 60 years old.
-
-2. **VIP Status:**
-   - Set `IsVIP` flag to TRUE for customers with a balance over $10,000.
-
-3. **Loan Due Reminders:**
-   - Fetch loans due in the next 30 days and print reminders.
-
-**Exercise 2: Error Handling**
-
-1. **Safe Fund Transfers:**
-   - Create a procedure to transfer funds between accounts with error handling.
-
-2. **Update Employee Salaries:**
-   - Handle errors when updating employee salaries if the employee ID doesn't exist.
-
-3. **Add New Customer:**
-   - Handle exceptions when inserting a new customer if the customer ID already exists.
-
-**Exercise 3: Stored Procedures**
-
-1. **Process Monthly Interest:**
-   - Calculate and update the balance of all savings accounts by applying a 1% interest rate.
-
-2. **Employee Bonus Scheme:**
-   - Update employee salaries by adding a bonus percentage.
-
-3. **Fund Transfers Between Accounts:**
-   - Transfer funds between accounts after checking the source account balance.
-
-**Exercise 4: Functions**
-
-1. **Calculate Customer Age:**
-   - Function to calculate age from the date of birth.
-
-2. **Monthly Loan Installment:**
-   - Function to compute the monthly installment for a loan.
-
-3. **Check Sufficient Balance:**
-   - Function to check if an account has a sufficient balance for a transaction.
-
-**Exercise 5: Triggers**
-
-1. **Update LastModified Column:**
-   - Trigger to update the `LastModified` column whenever a customer's record is updated.
-
-2. **Log Transactions:**
-   - Trigger to log transactions into an `AuditLog` table.
-
-3. **Ensure Valid Transactions:**
-   - Trigger to ensure withdrawals do not exceed the balance and deposits are positive.
-
-**Exercise 6: Cursors**
-
-1. **Generate Monthly Statements:**
-   - PL/SQL block with an explicit cursor to generate statements for all customers.
-
-2. **Apply Annual Fee:**
-   - PL/SQL block with an explicit cursor to deduct an annual fee from all accounts.
-
-3. **Update Loan Interest Rates:**
-   - PL/SQL block with an explicit cursor to update loan interest rates based on a new policy.
-
-**Exercise 7: Packages**
-
-1. **Customer Management Package:**
-   - Group procedures for adding, updating customers, and getting customer balance.
-
-2. **Employee Management Package:**
-   - Group procedures for hiring, updating employees, and calculating annual salary.
-
-3. **Account Operations Package:**
-   - Group procedures for opening, closing accounts, and getting the total balance across all accounts.
-
-**Database Schema:**
-- The database schema includes tables for Customers, Accounts, Transactions, Loans, and Employees.
-- Sample data is provided for testing the PL/SQL blocks.
-
-**How to Use:**
-
-1. **Create Tables:**
-   - Run the provided schema to create the necessary tables.
-
-2. **Insert Sample Data:**
-   - Use the sample data scripts to populate the tables.
-
-3. **Execute PL/SQL Blocks:**
-   - Write and execute the PL/SQL blocks for each scenario.
-
-4. **Verify Results:**
-   - Check the results in the database tables to ensure correctness.
-
-This project helps in understanding and implementing various PL/SQL features to manage a bank's database effectively.
+Utilize Hibernate-specific annotations to optimize entity mappings. Configure Hibernate dialect and properties for performance, and implement batch processing for efficient bulk operations.
