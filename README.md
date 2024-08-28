@@ -1,30 +1,25 @@
-Exercise 1: Employee Management System - Overview and Setup
-
-Initialize a Spring Boot project named EmployeeManagementSystem with dependencies: Spring Data JPA, H2 Database, Spring Web, and Lombok. Configure application.properties for H2 database connection using the provided settings.
-Exercise 2: Employee Management System - Creating Entities
-
-Define JPA entities for Employee and Department with appropriate fields and relationships. Use annotations like @Entity and @Table to map entities to database tables, and establish a one-to-many relationship between Department and Employee.
-Exercise 3: Employee Management System - Creating Repositories
-
-Create EmployeeRepository and DepartmentRepository interfaces extending JpaRepository for CRUD operations. Define derived query methods to leverage Spring Data repositories for efficient data management.
-Exercise 4: Employee Management System - Implementing CRUD Operations
-
-Implement basic CRUD operations using JpaRepository methods. Develop RESTful endpoints in EmployeeController and DepartmentController to manage employees and departments.
-Exercise 5: Employee Management System - Defining Query Methods
-
-Enhance repositories with custom queries using method names and the @Query annotation. Define and execute named queries with @NamedQuery and @NamedQueries for specialized data retrieval.
-Exercise 6: Employee Management System - Implementing Pagination and Sorting
-
-Add pagination to employee search functionality using Page and Pageable. Incorporate sorting capabilities and combine pagination with sorting in search endpoints to improve data retrieval.
-Exercise 7: Employee Management System - Enabling Entity Auditing
-
-Enable entity auditing to track creation and modification of employees and departments. Use annotations like @CreatedBy, @LastModifiedBy, @CreatedDate, and @LastModifiedDate for auditing purposes.
-Exercise 8: Employee Management System - Creating Projections
-
-Create interface-based and class-based projections to fetch specific data subsets from entities. Use @Value and constructor expressions to customize the data returned by projections.
-Exercise 9: Employee Management System - Customizing Data Source Configuration
-
-Customize data source configuration and manage multiple data sources. Leverage Spring Boot auto-configuration and externalize settings in application.properties for flexible data source management.
-Exercise 10: Employee Management System - Hibernate-Specific Features
-
-Utilize Hibernate-specific annotations to optimize entity mappings. Configure Hibernate dialect and properties for performance, and implement batch processing for efficient bulk operations.
+CRUD Operations (Exercise 8)
+•	Entities: Book and Customer
+•	CRUD Endpoints: Endpoints for creating, reading, updating, and deleting books and customers.
+•	Input Validation: Implemented using annotations such as @NotNull, @Size, and @Min.
+•	Optimistic Locking: Implemented for concurrent updates using JPA versioning.
+HATEOAS Support (Exercise 9)
+•	Spring HATEOAS: Added HATEOAS links to resources in API responses for better navigation.
+Content Negotiation (Exercise 10)
+•	Supported Media Types: JSON and XML.
+•	Accept Header: The API supports content negotiation based on the Accept header.
+Monitoring with Spring Boot Actuator (Exercise 11)
+•	Actuator Dependency: Spring Boot Actuator has been integrated.
+•	Custom Metrics: Exposed custom metrics for monitoring the application.
+•	Actuator Endpoints: Enabled and customized key Actuator endpoints.
+Security with JWT Authentication (Exercise 12)
+•	JWT-based Authentication: Integrated Spring Security and JWT for securing RESTful endpoints.
+•	CORS Configuration: Configured CORS to handle cross-origin requests.
+Testing (Exercise 13 and 14)
+•	Unit Testing: Written unit tests for REST controllers using JUnit and Mockito.
+•	Integration Testing: Implemented integration tests for REST services using Spring Test and MockMvc.
+•	Database Integration: Included database integration tests using an in-memory H2 database.
+ API Documentation with Swagger (Exercise 15)
+•	Swagger/Springdoc: Added Swagger dependency to generate API documentation.
+•	Swagger UI: The API documentation is available at http://localhost:8185/swagger-ui/index.html.
+•	Project Structure
